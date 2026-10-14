@@ -1,0 +1,277 @@
+/* Compendium Reference — dense reference reading for Obsidian
+   slug: reading-compendium   family: reading   modes: light, dark
+   Original CSS, MIT. System fonts only. No network assets, no @import. */
+
+.theme-light,
+.theme-dark {
+  --font-text-theme: "Times New Roman", "Liberation Serif", Times, serif;
+  --font-interface-theme: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-monospace-theme: "SF Mono", Menlo, Consolas, monospace;
+  --font-weight: 400;
+  --bold-weight: 700;
+  --bold-modifier: 200;
+  --line-height-normal: 1.42;
+  --line-height-tight: 1.2;
+  --p-spacing: 0.4em;
+  --heading-spacing: 1.05em;
+  --h1-size: 1.6em;   --h2-size: 1.28em;  --h3-size: 1.12em;
+  --h4-size: 1em;     --h5-size: 0.94em;  --h6-size: 0.88em;
+  --h1-weight: 700;   --h2-weight: 700;   --h3-weight: 700;
+  --h4-weight: 700;   --h5-weight: 700;   --h6-weight: 700;
+  --h1-line-height: 1.15; --h2-line-height: 1.15; --h3-line-height: 1.18;
+  --h1-font: "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+  --h2-font: "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+  --h3-font: var(--font-interface-theme);
+  --file-line-width: 44rem;
+  --list-indent: 1.45em;
+  --list-spacing: 0.08em;
+  --checkbox-size: 15px;
+  --checkbox-radius: 3px;
+  --callout-radius: 3px;
+  --callout-border-width: 1px;
+  --callout-border-opacity: 1;
+  --callout-padding: 0.55em 0.8em;
+  --callout-title-size: 0.95em;
+  --table-border-color: var(--background-modifier-border);
+  --table-border-width: 1px;
+  --table-text-size: 0.9em;
+  --table-line-height: 1.3;
+  --table-row-alt-background: var(--background-secondary);
+  --code-size: 0.85em;
+  --code-background: var(--background-secondary);
+  --tag-radius: 3px;
+  --tag-size: 0.78em;
+  --radius-s: 3px;
+  --radius-m: 4px;
+  --divider-color: var(--background-modifier-border);
+  --divider-width: 1px;
+  --tab-radius: 3px;
+  --scrollbar-width: 11px;
+}
+
+.theme-light {
+  --color-base-00: #fbfaf7; --color-base-05: #f7f6f2; --color-base-10: #f2f1ec;
+  --color-base-20: #e9e8e2; --color-base-25: #dededa; --color-base-30: #cfcfca;
+  --color-base-35: #bcbcb7; --color-base-40: #a3a39e; --color-base-50: #85857f;
+  --color-base-60: #64645f; --color-base-70: #4a4a46; --color-base-100: #1f1d1a;
+  --accent-h: 212; --accent-s: 78%; --accent-l: 32%;
+  --background-primary: #fbfaf7;
+  --background-primary-alt: #f7f6f2;
+  --background-secondary: #efeee9;
+  --background-secondary-alt: #e9e8e2;
+  --background-modifier-border: #d3d2cc;
+  --background-modifier-border-hover: #b7b6b0;
+  --background-modifier-border-focus: #0b4f8a;
+  --background-modifier-hover: rgba(11, 79, 138, 0.07);
+  --background-modifier-active-hover: rgba(11, 79, 138, 0.13);
+  --background-modifier-form-field: #fbfaf7;
+  --text-normal: #1f1d1a; --text-muted: #565550; --text-faint: #87867f;
+  --text-accent: #0b4f8a; --text-accent-hover: #083a66;
+  --text-on-accent: #fbfaf7;
+  --text-selection: rgba(11, 79, 138, 0.16);
+  --text-highlight-bg: rgba(240, 196, 60, 0.4);
+  --interactive-normal: #ededea; --interactive-hover: #e2e2de;
+  --interactive-accent: #0b4f8a; --interactive-accent-hover: #083a66;
+  --link-color: #0b4f8a; --link-color-hover: #083a66;
+  --link-external-color: #7a1f6b; --link-external-color-hover: #5c1750;
+  --link-unresolved-color: #85857f;
+  --tag-background: #e5e5e0; --tag-color: #3a3a36;
+  --tag-background-hover: #dbdcd6;
+  --code-normal: #24221f;
+  --code-background: #efeee9;
+  --code-comment: #7c7b74; --code-keyword: #0b4f8a; --code-string: #3f6b2a;
+  --code-function: #6b3a7a; --code-value: #8a5a1e; --code-tag: #a03418;
+  --tab-text-color: #565550; --tab-text-color-active: #1f1d1a;
+  --tab-text-color-focused: #1f1d1a; --tab-text-color-focused-active: #1f1d1a;
+  --tab-background-active: #fbfaf7;
+  --tab-outline-color: #d3d2cc;
+  --nav-item-color: #43423d; --nav-item-color-hover: #1f1d1a;
+  --nav-item-color-active: #0b4f8a; --nav-item-background-hover: rgba(11, 79, 138, 0.07);
+  --nav-item-background-active: rgba(11, 79, 138, 0.13);
+  --scrollbar-bg: transparent;
+  --scrollbar-thumb-bg: rgba(31, 29, 26, 0.2);
+  --scrollbar-active-thumb-bg: rgba(31, 29, 26, 0.36);
+}
+
+.theme-dark {
+  --color-base-00: #16181c; --color-base-05: #1a1c21; --color-base-10: #1e2126;
+  --color-base-20: #25282e; --color-base-25: #2b2f36; --color-base-30: #343841;
+  --color-base-35: #41464f; --color-base-40: #545962; --color-base-50: #6e737c;
+  --color-base-60: #9aa0a8; --color-base-70: #b4b9c0; --color-base-100: #e6e8ea;
+  --accent-h: 210; --accent-s: 80%; --accent-l: 66%;
+  --background-primary: #16181c;
+  --background-primary-alt: #1a1c21;
+  --background-secondary: #1e2126;
+  --background-secondary-alt: #25282e;
+  --background-modifier-border: #343841;
+  --background-modifier-border-hover: #4b515b;
+  --background-modifier-border-focus: #6fb3f2;
+  --background-modifier-hover: rgba(111, 179, 242, 0.09);
+  --background-modifier-active-hover: rgba(111, 179, 242, 0.15);
+  --background-modifier-form-field: #1a1c21;
+  --text-normal: #e6e8ea; --text-muted: #a7adb5; --text-faint: #7e848c;
+  --text-accent: #6fb3f2; --text-accent-hover: #9bccf7;
+  --text-on-accent: #10131a;
+  --text-selection: rgba(111, 179, 242, 0.2);
+  --text-highlight-bg: rgba(240, 196, 60, 0.3);
+  --interactive-normal: #25282e; --interactive-hover: #2f333a;
+  --interactive-accent: #6fb3f2; --interactive-accent-hover: #9bccf7;
+  --link-color: #6fb3f2; --link-color-hover: #9bccf7;
+  --link-external-color: #d99be0; --link-external-color-hover: #e7bdec;
+  --link-unresolved-color: #7e848c;
+  --tag-background: #2b2f36; --tag-color: #c9ced5;
+  --tag-background-hover: #363b44;
+  --code-normal: #dfe2e6;
+  --code-background: #1e2126;
+  --code-comment: #7e848c; --code-keyword: #6fb3f2; --code-string: #a7d08a;
+  --code-function: #d3a7e0; --code-value: #e8c48a; --code-tag: #f0a08a;
+  --tab-text-color: #a7adb5; --tab-text-color-active: #e6e8ea;
+  --tab-text-color-focused: #e6e8ea; --tab-text-color-focused-active: #f2f4f6;
+  --tab-background-active: #1a1c21;
+  --tab-outline-color: #343841;
+  --nav-item-color: #b8bdc4; --nav-item-color-hover: #e6e8ea;
+  --nav-item-color-active: #9bccf7; --nav-item-background-hover: rgba(111, 179, 242, 0.09);
+  --nav-item-background-active: rgba(111, 179, 242, 0.15);
+  --scrollbar-bg: transparent;
+  --scrollbar-thumb-bg: rgba(230, 232, 234, 0.2);
+  --scrollbar-active-thumb-bg: rgba(230, 232, 234, 0.36);
+}
+
+/* ---------- density: compact reading scale, tight but legible ---------- */
+.markdown-preview-view .markdown-rendered {
+  font-size: calc(var(--font-text-size) * 0.94);
+  line-height: var(--line-height-normal);
+}
+.markdown-preview-view .markdown-preview-sizer,
+.markdown-source-view.mod-cm6 .cm-sizer { max-width: var(--file-line-width); margin-inline: auto; }
+.markdown-rendered p { margin-block: 0 0.4em; }
+.markdown-rendered h1, .markdown-rendered h2, .markdown-rendered h3 {
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-block: 1.05em 0.35em;
+}
+
+/* auto-numbered sections in Reading view */
+.markdown-preview-view { counter-reset: comp-sec; }
+.markdown-rendered h2 { counter-increment: comp-sec; }
+.markdown-rendered h2::before {
+  content: counter(comp-sec) ". ";
+  color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+/* hanging-indent lists, as in a reference index */
+.markdown-rendered ul, .markdown-rendered ol { padding-inline-start: 1.45em; }
+.markdown-rendered li > mark, .markdown-rendered .ref-item { text-indent: -1.2em; padding-inline-start: 1.2em; }
+.markdown-rendered li { margin-block: 0.06em; }
+.markdown-rendered ul > li::marker { content: "–  "; color: var(--text-faint); }
+.markdown-rendered ol > li::marker { color: var(--text-muted); font-variant-numeric: tabular-nums; }
+
+/* ---------- links ---------- */
+a.internal-link, a.external-link, .cm-link, .cm-url { text-decoration: underline; text-underline-offset: 0.14em; }
+a.internal-link { color: var(--link-color); }
+a.internal-link:hover { color: var(--link-color-hover); }
+a.external-link { color: var(--link-external-color); }
+a.external-link:hover { color: var(--link-external-color-hover); }
+.is-unresolved, a.is-unresolved { color: var(--link-unresolved-color); }
+
+/* ---------- tasks ---------- */
+.markdown-rendered input[type="checkbox"], .task-list-item input[type="checkbox"] {
+  width: var(--checkbox-size); height: var(--checkbox-size);
+  border-radius: var(--checkbox-radius);
+  border: 1px solid var(--background-modifier-border-hover);
+}
+.markdown-rendered input[type="checkbox"]:checked { background: var(--interactive-accent); }
+.markdown-rendered .task-list-item { list-style: none; }
+.markdown-rendered .task-list-item.is-checked { color: var(--text-faint); text-decoration: line-through; }
+
+/* ---------- blockquote ---------- */
+.markdown-rendered blockquote {
+  border-inline-start: 3px solid var(--background-modifier-border);
+  background: var(--background-secondary);
+  margin-inline: 0; padding: 0.4em 0.8em; font-size: 0.95em; color: var(--text-muted);
+}
+
+/* ---------- callouts: dense reference boxes ---------- */
+.callout {
+  border-radius: var(--callout-radius);
+  border: 1px solid var(--background-modifier-border);
+  background: var(--background-secondary);
+  mix-blend-mode: normal;
+}
+.callout-title { text-transform: uppercase; letter-spacing: 0.05em; font-size: var(--callout-title-size); }
+.callout-content { font-size: 0.95em; }
+
+/* ---------- tables: compact with zebra rows ---------- */
+.markdown-rendered table { border-collapse: collapse; width: 100%; font-size: var(--table-text-size); line-height: var(--table-line-height); }
+.markdown-rendered th, .markdown-rendered td { border: 1px solid var(--background-modifier-border); padding: 0.22em 0.5em; }
+.markdown-rendered thead th { text-transform: uppercase; letter-spacing: 0.04em; background: var(--background-secondary); }
+.markdown-rendered tbody tr:nth-child(even) { background: var(--table-row-alt-background); }
+
+/* ---------- code ---------- */
+.markdown-rendered code { font-size: var(--code-size); }
+.markdown-rendered :not(pre) > code, .cm-inline-code {
+  background: var(--code-background); border-radius: var(--radius-s);
+  padding: 0.05em 0.28em; color: var(--code-normal);
+}
+.markdown-rendered pre, .HyperMD-codeblock {
+  background: var(--code-background); border-radius: var(--radius-s);
+  border: 1px solid var(--background-modifier-border); line-height: 1.35;
+}
+.markdown-rendered pre code { background: transparent; }
+
+/* ---------- tags and rules ---------- */
+.tag, a.tag {
+  background: var(--tag-background); color: var(--tag-color);
+  border-radius: var(--tag-radius); padding: 0.02em 0.4em; font-size: var(--tag-size);
+}
+a.tag:hover { background: var(--tag-background-hover); }
+.markdown-rendered hr { border: none; border-top: 1px solid var(--divider-color); }
+
+/* ---------- search ---------- */
+.search-result { border-bottom: 1px solid var(--divider-color); }
+.search-result-file-title { font-weight: 700; color: var(--text-normal); }
+.search-result-file-matched-text { background: var(--text-highlight-bg); }
+
+/* ---------- settings and modals ---------- */
+.modal, .prompt { border-radius: var(--radius-m); }
+.setting-item { border-top: 1px solid var(--divider-color); padding-block: 0.6em; }
+.setting-item-name { font-weight: 700; }
+.setting-item-description { color: var(--text-muted); font-size: 0.92em; }
+.vertical-tab-nav-item.is-active { color: var(--text-accent); font-weight: 700; }
+input[type="text"], input[type="search"], textarea, select {
+  border-radius: var(--radius-s); border: 1px solid var(--background-modifier-border);
+}
+
+/* ---------- tabs ---------- */
+.workspace-tab-header { border-radius: var(--tab-radius); font-size: 0.92em; }
+.workspace-tab-header.is-active .workspace-tab-header-inner-title { color: var(--tab-text-color-active); font-weight: 700; }
+
+/* ---------- navigation ---------- */
+.nav-file-title, .nav-folder-title { border-radius: var(--radius-s); color: var(--nav-item-color); min-height: 1.5em; font-size: 0.92em; }
+.nav-file-title:hover, .nav-folder-title:hover { background: var(--nav-item-background-hover); }
+.nav-file-title.is-active { background: var(--nav-item-background-active); color: var(--nav-item-color-active); }
+
+/* ---------- status bar, scrollbars, selection, focus ---------- */
+.status-bar { background: var(--background-secondary); color: var(--text-muted); }
+::-webkit-scrollbar-thumb { background: var(--scrollbar-thumb-bg); border-radius: 5px; }
+::selection { background: var(--text-selection); }
+:focus-visible {
+  outline: 2px solid var(--background-modifier-border-focus);
+  outline-offset: 1px;
+  border-radius: var(--radius-s);
+}
+
+@media (max-width: 640px) {
+  .markdown-preview-view .markdown-preview-sizer,
+  .markdown-source-view.mod-cm6 .cm-sizer { padding-inline: 0.8rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition-duration: 1ms !important;
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+  }
+}
