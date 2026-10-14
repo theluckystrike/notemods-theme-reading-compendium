@@ -151,14 +151,7 @@
   margin-block: 1.05em 0.35em;
 }
 
-/* auto-numbered sections in Reading view */
-.markdown-preview-view { counter-reset: comp-sec; }
-.markdown-rendered h2 { counter-increment: comp-sec; }
-.markdown-rendered h2::before {
-  content: counter(comp-sec) ". ";
-  color: var(--text-muted);
-  font-variant-numeric: tabular-nums;
-}
+/* Heading labels stay authored in Markdown so virtualization cannot change their meaning. */
 
 /* hanging-indent lists, as in a reference index */
 .markdown-rendered ul, .markdown-rendered ol { padding-inline-start: 1.45em; }

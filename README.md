@@ -12,7 +12,7 @@ Obsidian directory approval is not claimed.
 
 ## Design
 
-- Numbered reading sections.
+- Compact serif reference layout.
 - Hanging list indents.
 - Striped tables with tabular figures.
 
@@ -33,7 +33,7 @@ They show Live Preview and Reading view side by side.
 
 ## Install the preview
 
-1. Download `theme.css` and `manifest.json` from the `1.0.1` release.
+1. Download `theme.css` and `manifest.json` from the `1.0.2` release.
 2. Open your vault folder. Show hidden folders if necessary.
 3. Create `.obsidian/themes/Compendium Reference/` inside the vault.
 4. Put both files in that folder. Keep their file names unchanged.
@@ -67,7 +67,7 @@ Use a test note. Remove personal information from screenshots before you send th
 ## Credits and licence
 
 The original manifest credits Reading Factory (U1).
-NoteMods maintains this preview repository. The original CSS and copyright credits are preserved.
+NoteMods maintains this preview repository. Copyright credits and MIT terms are preserved.
 Metadata and licence formatting were corrected for directory review. The MIT terms are unchanged.
 See [LICENSE](./LICENSE) for the MIT terms.
 
@@ -82,3 +82,17 @@ This is original CSS written for this project. It does not copy published theme 
 This update corrects repository metadata. The theme CSS is unchanged.
 The score above is historical. These current repository files have not received a new independent review.
 The 95/100 acceptance gate remains unmet.
+
+## Version 1.0.2
+
+Automatic heading numbers were removed because scrolling long notes could reset them to incorrect values.
+Heading size, weight, and rules still show the document hierarchy.
+Type section numbers in Markdown when you need stable numbered headings.
+The historical score applies to source version 1.0.0. This repair has not received a new independent quality review.
+The 95/100 acceptance gate remains unmet.
+
+## Callouts and tables
+
+![Light mode callouts and tables](./images/light-components.jpg)
+
+![Dark mode callouts and tables](./images/dark-components.jpg)
